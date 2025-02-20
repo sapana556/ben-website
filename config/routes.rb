@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  resources :pages, :except => [:index]
+  get 'home', to: 'pages#index', as: 'home'
 end
